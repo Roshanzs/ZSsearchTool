@@ -13,4 +13,5 @@ pod 'MobAPI-For-iOS'
 pod 'MOBFoundation'
 pod 'AFNetworking'
 pod 'MBProgressHUD'
+pod 'SDCycleScrollView','~> 1.64'
 end

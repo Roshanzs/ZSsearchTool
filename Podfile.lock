@@ -20,9 +20,11 @@ PODS:
   - MobAPI-For-iOS (1.0.7):
     - MOBFoundation
   - MOBFoundation (2.2.15)
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -31,6 +33,7 @@ DEPENDENCIES:
   - MJRefresh
   - MobAPI-For-iOS
   - MOBFoundation
+  - SDCycleScrollView (~> 1.64)
   - SDWebImage
 
 SPEC CHECKSUMS:
@@ -40,8 +43,9 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MobAPI-For-iOS: c8b2630fc6250a2cfdb4822c3b3cd8fb28300111
   MOBFoundation: 4975874f74c991f562151f6a4549e9a6ad743fd8
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 63dc4d1575c5eb327ca359f1c65af6f960b08822
+PODFILE CHECKSUM: 613eb85c4968779498b8a6d6c6de9baa05e1a426
 
 COCOAPODS: 1.1.1

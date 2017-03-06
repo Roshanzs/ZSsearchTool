@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "HomeViewController.h"
 #import <MobAPI/MobAPI.h>
 @interface AppDelegate ()
 
@@ -18,8 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:BSCREEN];
-    ViewController *v= [[ViewController alloc]init];
-    self.window.rootViewController = v;
+    HomeViewController *v= [[HomeViewController alloc]init];
+    UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:v];
+    self.window.rootViewController = nv;
     [self.window makeKeyAndVisible];
     [MobAPI registerApp:@"1b5b1bc53d350"];
     return YES;

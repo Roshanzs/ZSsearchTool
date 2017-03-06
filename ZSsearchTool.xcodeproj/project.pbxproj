@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B3A6BC71E6D0ABC00A6A448 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A6BC61E6D0ABC00A6A448 /* LogViewController.m */; };
+		8B3A6BCC1E6D108C00A6A448 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A6BCB1E6D108C00A6A448 /* BaseViewController.m */; };
+		8B3A6BD51E6D144700A6A448 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A6BD21E6D144700A6A448 /* HomeViewController.m */; };
+		8B3A6BD81E6D146A00A6A448 /* MainHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A6BD71E6D146A00A6A448 /* MainHeadView.m */; };
+		8B3A6BDB1E6D156B00A6A448 /* MainHeadCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A6BDA1E6D156B00A6A448 /* MainHeadCollectionViewCell.m */; };
 		8BFE36851E694C090081507C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE36841E694C090081507C /* main.m */; };
 		8BFE36881E694C090081507C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE36871E694C090081507C /* AppDelegate.m */; };
 		8BFE368B1E694C090081507C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE368A1E694C090081507C /* ViewController.m */; };
@@ -27,6 +32,16 @@
 		1E6DA92FE45349A250002E71 /* libPods-ZSsearchTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZSsearchTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FCCC9CC1235BE38DE97584 /* Pods-ZSsearchTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSsearchTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZSsearchTool/Pods-ZSsearchTool.release.xcconfig"; sourceTree = "<group>"; };
 		78C7C247B9B0C8AD09F22136 /* Pods-ZSsearchTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSsearchTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZSsearchTool/Pods-ZSsearchTool.debug.xcconfig"; sourceTree = "<group>"; };
+		8B3A6BC51E6D0ABC00A6A448 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
+		8B3A6BC61E6D0ABC00A6A448 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
+		8B3A6BCA1E6D108C00A6A448 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8B3A6BCB1E6D108C00A6A448 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8B3A6BD11E6D144700A6A448 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8B3A6BD21E6D144700A6A448 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		8B3A6BD61E6D146A00A6A448 /* MainHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainHeadView.h; sourceTree = "<group>"; };
+		8B3A6BD71E6D146A00A6A448 /* MainHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainHeadView.m; sourceTree = "<group>"; };
+		8B3A6BD91E6D156B00A6A448 /* MainHeadCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainHeadCollectionViewCell.h; sourceTree = "<group>"; };
+		8B3A6BDA1E6D156B00A6A448 /* MainHeadCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainHeadCollectionViewCell.m; sourceTree = "<group>"; };
 		8BFE36801E694C090081507C /* ZSsearchTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZSsearchTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFE36841E694C090081507C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BFE36861E694C090081507C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +98,52 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8B3A6BC81E6D105F00A6A448 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A6BD01E6D144700A6A448 /* controller */,
+				8B3A6BD31E6D144700A6A448 /* model */,
+				8B3A6BD41E6D144700A6A448 /* view */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8B3A6BC91E6D107A00A6A448 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A6BCA1E6D108C00A6A448 /* BaseViewController.h */,
+				8B3A6BCB1E6D108C00A6A448 /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8B3A6BD01E6D144700A6A448 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A6BD11E6D144700A6A448 /* HomeViewController.h */,
+				8B3A6BD21E6D144700A6A448 /* HomeViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		8B3A6BD31E6D144700A6A448 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8B3A6BD41E6D144700A6A448 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A6BD61E6D146A00A6A448 /* MainHeadView.h */,
+				8B3A6BD71E6D146A00A6A448 /* MainHeadView.m */,
+				8B3A6BD91E6D156B00A6A448 /* MainHeadCollectionViewCell.h */,
+				8B3A6BDA1E6D156B00A6A448 /* MainHeadCollectionViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		8BFE36771E694C090081507C = {
 			isa = PBXGroup;
 			children = (
@@ -104,12 +165,16 @@
 		8BFE36821E694C090081507C /* ZSsearchTool */ = {
 			isa = PBXGroup;
 			children = (
+				8B3A6BC91E6D107A00A6A448 /* Base */,
 				8BFE369D1E694D6F0081507C /* Tools */,
 				8BFE369A1E694C360081507C /* Three */,
 				8BFE36861E694C090081507C /* AppDelegate.h */,
 				8BFE36871E694C090081507C /* AppDelegate.m */,
+				8B3A6BC51E6D0ABC00A6A448 /* LogViewController.h */,
+				8B3A6BC61E6D0ABC00A6A448 /* LogViewController.m */,
 				8BFE36891E694C090081507C /* ViewController.h */,
 				8BFE368A1E694C090081507C /* ViewController.m */,
+				8B3A6BC81E6D105F00A6A448 /* Home */,
 				8BFE368F1E694C090081507C /* Assets.xcassets */,
 				8BFE36B11E6959A30081507C /* LaunchScreen.storyboard */,
 				8BFE36941E694C090081507C /* Info.plist */,
@@ -304,15 +369,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFE36A61E694D780081507C /* ZSShowViewTools.m in Sources */,
+				8B3A6BCC1E6D108C00A6A448 /* BaseViewController.m in Sources */,
 				8BFE36B01E6956340081507C /* NSObject+ZXPUnicode.m in Sources */,
 				8BFE36BB1E6972C30081507C /* HomeTableViewCell.m in Sources */,
 				8BFE368B1E694C090081507C /* ViewController.m in Sources */,
+				8B3A6BD51E6D144700A6A448 /* HomeViewController.m in Sources */,
 				8BFE36A51E694D780081507C /* ToolKit.m in Sources */,
+				8B3A6BDB1E6D156B00A6A448 /* MainHeadCollectionViewCell.m in Sources */,
 				8BFE36881E694C090081507C /* AppDelegate.m in Sources */,
 				8BFE36851E694C090081507C /* main.m in Sources */,
 				8BFE36AE1E6956340081507C /* NSArray+ ZXPUnicode.m in Sources */,
 				8BFE36A41E694D780081507C /* NSString+Tools.m in Sources */,
 				8BFE36AF1E6956340081507C /* NSDictionary+ZXPUnicode.m in Sources */,
+				8B3A6BC71E6D0ABC00A6A448 /* LogViewController.m in Sources */,
+				8B3A6BD81E6D146A00A6A448 /* MainHeadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
