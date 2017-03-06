@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MainHeadViewDeleagte <NSObject>
+
+//点击的哪个
+-(void)didSelectBtnWith:(NSInteger)intger;
+
+@end
+
 @interface MainHeadView : UIView
+
+@property(nonatomic,weak)id<MainHeadViewDeleagte> delegate;
 
 @end

@@ -15,7 +15,7 @@
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h" // 更新sdweb后需要设置cookie可用   request.HTTPShouldHandleCookies=YES;
 //#import "AFNetworking.h"
-
+#import <MobAPI/MobAPI.h>
 //全局颜色
 #define ColorWithRGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 #define ColorWithRGB(r,g,b) ColorWithRGBA(r,g,b,1.0f)

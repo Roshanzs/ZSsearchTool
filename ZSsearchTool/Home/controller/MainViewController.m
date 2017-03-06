@@ -1,30 +1,48 @@
 //
-//  HomeViewController.m
+//  MainViewController.m
 //  ZSsearchTool
 //
 //  Created by 紫贝壳 on 2017/3/6.
 //  Copyright © 2017年 stark. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "MainViewController.h"
 #import "MainHeadView.h"
+#import "LocationViewController.h"
+#import "MainInfoViewController.h"
+
+
 
 #define homecellid @"homecellid"
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@interface MainViewController ()<UITableViewDelegate,UITableViewDataSource,MainHeadViewDeleagte>
 @property(nonatomic,strong)UITableView *tableview;
-@property(nonatomic,strong)UIView *mainheadView;
+@property(nonatomic,strong)MainHeadView *mainheadView;
 
 //tableviewcell的数据
 @property(nonatomic,strong)NSArray *tableViewCellDataArr;
 
 @end
 
-@implementation HomeViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableview];
+    
+    UIBarButtonItem *loca = [[UIBarButtonItem alloc]initWithTitle:@"武汉" style:UIBarButtonItemStylePlain target:self action:@selector(createLocation:)];
+    self.navigationItem.leftBarButtonItem = loca;
 }
+
+//点击定位
+-(void)createLocation:(UIBarButtonItem *)item{
+    LocationViewController *locationVC = [[LocationViewController alloc]init];
+    locationVC.locationSuccess = ^(NSString *city){
+        item.title = city;
+    };
+    [self.navigationController pushViewController:locationVC animated:YES];
+}
+
 
 #pragma mark tableview懒加载
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -51,6 +69,7 @@
 -(UIView *)mainheadView{
     if (_mainheadView == nil) {
         _mainheadView = [[MainHeadView alloc]initWithFrame:CGRectMake(0, 0, WSCREEN, 300.0/667.0*HSCREEN)];
+        _mainheadView.delegate = self;
     }
     return _mainheadView;
 }
@@ -61,6 +80,31 @@
         _tableViewCellDataArr = [NSArray array];
     }
     return _tableViewCellDataArr;
+}
+
+//mainview的代理方法
+-(void)didSelectBtnWith:(NSInteger)intger{
+    switch (intger) {
+        case 0:
+            [self sendRequest:[MOBACookRequest categoryRequest]];
+            break;
+            
+        default:
+            break;
+    }
+}
+#pragma mark mob方法
+- (void)sendRequest:(MOBARequest *)request
+{
+    [MobAPI sendRequest:request onResult:^(MOBAResponse *response)
+     {
+         NSDictionary *dict = response.responder;
+         if ([[dict objectForKey:@"retCode"] isEqualToString: @"200"]) {
+             NSDictionary *dic = [dict objectForKey:@"result"];
+             MainInfoViewController *maininfoV = [[MainInfoViewController alloc]initWithDic:dic];
+             [self.navigationController pushViewController:maininfoV animated:YES];
+         }
+     }];
 }
 
 

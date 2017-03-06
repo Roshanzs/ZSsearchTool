@@ -1,5 +1,5 @@
 //
-//  BaseViewController.h
+//  BaseNavigationController.h
 //  Enjoy-Booking
 //
 //  Created by 紫贝壳 on 2017/1/4.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseViewController : UIViewController
+@interface BaseNavigationController : UINavigationController
 
 @end

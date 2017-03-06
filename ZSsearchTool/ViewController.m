@@ -45,7 +45,6 @@
     NSDictionary *plistDict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
     self.sectionTitlesArray = [[plistDict objectForKey:@"ApiCategory"] objectForKey:@"SectionTitlesArray"];
     self.cellTitlesArray = [[plistDict objectForKey:@"ApiCategory"] objectForKey:@"CellTitlesArray"];
-
 }
 
 #pragma mark collection代理方法

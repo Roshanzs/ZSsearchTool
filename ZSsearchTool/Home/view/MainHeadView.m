@@ -35,6 +35,8 @@ static NSString *mainCollectioncellID = @"mainCollectioncellID";
     cycleScrollView.localizationImageNamesGroup = @[@"timg",@"timg-3",@"timg-2"];
     [self addSubview:cycleScrollView];
     [self addSubview:self.collectionView];
+    
+
 }
 
 #pragma mark collection的代理方法
@@ -48,10 +50,18 @@ static NSString *mainCollectioncellID = @"mainCollectioncellID";
     return cell;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+            if ([self.delegate respondsToSelector:@selector(didSelectBtnWith:)]) {
+                [self.delegate didSelectBtnWith:indexPath.item];
+            }
+}
+
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
+
+
 
 #pragma mark 懒加载
 -(UICollectionView *)collectionView{

@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  MainChooseViewController.h
 //  ZSsearchTool
 //
 //  Created by 紫贝壳 on 2017/3/6.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface HomeViewController : BaseViewController
+@interface MainChooseViewController : BaseViewController
 
 @end

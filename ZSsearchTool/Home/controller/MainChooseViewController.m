@@ -1,18 +1,18 @@
 //
-//  BaseViewController.m
-//  Enjoy-Booking
+//  MainChooseViewController.m
+//  ZSsearchTool
 //
-//  Created by 紫贝壳 on 2017/1/4.
-//  Copyright © 2017年 tony. All rights reserved.
+//  Created by 紫贝壳 on 2017/3/6.
+//  Copyright © 2017年 stark. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "MainChooseViewController.h"
 
-@interface BaseViewController ()
+@interface MainChooseViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation MainChooseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

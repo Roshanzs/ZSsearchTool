@@ -1,22 +1,21 @@
 //
-//  BaseViewController.m
+//  BaseNavigationController.m
 //  Enjoy-Booking
 //
 //  Created by 紫贝壳 on 2017/1/4.
 //  Copyright © 2017年 tony. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseNavigationController.h"
 
-@interface BaseViewController ()
+@interface BaseNavigationController ()
 
 @end
 
-@implementation BaseViewController
+@implementation BaseNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
