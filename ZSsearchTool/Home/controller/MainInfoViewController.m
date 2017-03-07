@@ -8,6 +8,7 @@
 
 #import "MainInfoViewController.h"
 #import "MainInfoModel.h"
+#import "MainChooseViewController.h"
 @interface MainInfoViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)NSArray *sectionTitlesArray;
 @property(nonatomic,strong)NSArray *cellTitlesArray;
@@ -87,6 +88,12 @@
     MainInfoModel *model = self.cellTitlesArray[indexPath.section][indexPath.row];
     cell.textLabel.text = model.name;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    MainInfoModel *model = self.cellTitlesArray[indexPath.section][indexPath.row];
+    MainChooseViewController *chooesVC = [[MainChooseViewController alloc]initWithInfoModel:model];
+    [self.navigationController pushViewController:chooesVC animated:YES];
 }
 
 //点击head隐藏显示row

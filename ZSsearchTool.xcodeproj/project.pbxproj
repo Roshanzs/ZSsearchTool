@@ -18,6 +18,8 @@
 		8BB5BA091E6D4BAB00695D93 /* MainInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5BA081E6D4BAB00695D93 /* MainInfoModel.m */; };
 		8BB5BA0C1E6D5A0600695D93 /* MainChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5BA0B1E6D5A0600695D93 /* MainChooseViewController.m */; };
 		8BB5BA0F1E6D5ABB00695D93 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5BA0E1E6D5ABB00695D93 /* BaseViewController.m */; };
+		8BB5BA121E6D621F00695D93 /* MainChooesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5BA111E6D621F00695D93 /* MainChooesModel.m */; };
+		8BB5BA151E6D69E700695D93 /* MainDeteilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5BA141E6D69E700695D93 /* MainDeteilViewController.m */; };
 		8BFE36851E694C090081507C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE36841E694C090081507C /* main.m */; };
 		8BFE36881E694C090081507C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE36871E694C090081507C /* AppDelegate.m */; };
 		8BFE368B1E694C090081507C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE368A1E694C090081507C /* ViewController.m */; };
@@ -60,6 +62,10 @@
 		8BB5BA0B1E6D5A0600695D93 /* MainChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainChooseViewController.m; sourceTree = "<group>"; };
 		8BB5BA0D1E6D5ABB00695D93 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8BB5BA0E1E6D5ABB00695D93 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8BB5BA101E6D621F00695D93 /* MainChooesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainChooesModel.h; sourceTree = "<group>"; };
+		8BB5BA111E6D621F00695D93 /* MainChooesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainChooesModel.m; sourceTree = "<group>"; };
+		8BB5BA131E6D69E700695D93 /* MainDeteilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDeteilViewController.h; sourceTree = "<group>"; };
+		8BB5BA141E6D69E700695D93 /* MainDeteilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDeteilViewController.m; sourceTree = "<group>"; };
 		8BFE36801E694C090081507C /* ZSsearchTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZSsearchTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFE36841E694C090081507C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BFE36861E694C090081507C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 				8B3A6BF71E6D3AA300A6A448 /* MainInfoViewController.m */,
 				8BB5BA0A1E6D5A0600695D93 /* MainChooseViewController.h */,
 				8BB5BA0B1E6D5A0600695D93 /* MainChooseViewController.m */,
+				8BB5BA131E6D69E700695D93 /* MainDeteilViewController.h */,
+				8BB5BA141E6D69E700695D93 /* MainDeteilViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -157,6 +165,8 @@
 			children = (
 				8BB5BA071E6D4BAB00695D93 /* MainInfoModel.h */,
 				8BB5BA081E6D4BAB00695D93 /* MainInfoModel.m */,
+				8BB5BA101E6D621F00695D93 /* MainChooesModel.h */,
+				8BB5BA111E6D621F00695D93 /* MainChooesModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -439,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFE36A61E694D780081507C /* ZSShowViewTools.m in Sources */,
+				8BB5BA121E6D621F00695D93 /* MainChooesModel.m in Sources */,
 				8BFE36B01E6956340081507C /* NSObject+ZXPUnicode.m in Sources */,
 				8BB5BA0C1E6D5A0600695D93 /* MainChooseViewController.m in Sources */,
 				8B3A6BF11E6D375000A6A448 /* MainViewController.m in Sources */,
@@ -455,6 +466,7 @@
 				8BFE36A41E694D780081507C /* NSString+Tools.m in Sources */,
 				8BFE36AF1E6956340081507C /* NSDictionary+ZXPUnicode.m in Sources */,
 				8BB5BA091E6D4BAB00695D93 /* MainInfoModel.m in Sources */,
+				8BB5BA151E6D69E700695D93 /* MainDeteilViewController.m in Sources */,
 				8B3A6BF81E6D3AA300A6A448 /* MainInfoViewController.m in Sources */,
 				8B3A6BC71E6D0ABC00A6A448 /* LogViewController.m in Sources */,
 				8BB5BA0F1E6D5ABB00695D93 /* BaseViewController.m in Sources */,

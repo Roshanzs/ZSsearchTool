@@ -17,4 +17,6 @@
 @property(nonatomic,strong)NSString *parentId;
 @property(nonatomic,strong)NSArray *childs;
 @property(nonatomic,strong)NSDictionary *categoryInfo;
+
+
 @end

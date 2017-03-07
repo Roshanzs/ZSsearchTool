@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
-
+#import "MainInfoModel.h"
 @interface MainChooseViewController : BaseViewController
 
+-(instancetype)initWithInfoModel:(MainInfoModel *)model;
 @end
