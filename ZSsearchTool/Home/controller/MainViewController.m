@@ -10,7 +10,7 @@
 #import "MainHeadView.h"
 #import "LocationViewController.h"
 #import "MainInfoViewController.h"
-
+#import "KuaidiViewController.h"
 
 
 #define homecellid @"homecellid"
@@ -88,11 +88,19 @@
         case 0:
             [self sendRequest:[MOBACookRequest categoryRequest]];
             break;
-            
+        case 1:
+        {
+            KuaidiViewController *kuaiVC = [[KuaidiViewController alloc]init];
+            [self.navigationController pushViewController:kuaiVC animated:YES];
+        }
+            break;
+   
         default:
             break;
     }
 }
+
+
 #pragma mark mob方法
 - (void)sendRequest:(MOBARequest *)request
 {

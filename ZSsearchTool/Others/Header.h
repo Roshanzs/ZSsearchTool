@@ -13,8 +13,8 @@
 #import "NSString+Tools.h"
 #import "ZSShowViewTools.h"
 #import "MJRefresh.h"
-#import "UIImageView+WebCache.h" // 更新sdweb后需要设置cookie可用   request.HTTPShouldHandleCookies=YES;
-//#import "AFNetworking.h"
+#import "UIImageView+WebCache.h" 
+#import "AFNetworking.h"
 #import <MobAPI/MobAPI.h>
 //全局颜色
 #define ColorWithRGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
@@ -44,8 +44,8 @@
 //服务器
 #define hosturl @"http:jfq.23zs.com/"
 
-//我的任务
-#define taskUrl @"renwu/index/index.html"
+//快递查询
+#define kuaidiUrl @"https://m.kuaidi100.com/index_all.html"
 //首页任务
 #define maintaskurl @"renwu/index/remen.html"
 //任务详情
