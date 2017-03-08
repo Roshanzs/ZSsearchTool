@@ -32,11 +32,25 @@ static NSString *mainCollectioncellID = @"mainCollectioncellID";
 
 -(void)setupUI{
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, WSCREEN, 150.0/667.0*HSCREEN) delegate:self placeholderImage:[UIImage imageNamed:@"detail"]];
-    cycleScrollView.localizationImageNamesGroup = @[@"timg",@"timg-3",@"timg-2"];
+    cycleScrollView.localizationImageNamesGroup = @[@"timg"];
     [self addSubview:cycleScrollView];
     [self addSubview:self.collectionView];
-    
+    [self takeOthersInfoWith:cycleScrollView];
+}
 
+-(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    
+}
+
+//添加信息
+-(void)takeOthersInfoWith:(SDCycleScrollView *)cyclescrollview{
+    MOBARequest *request =[MOBAWeatherRequest searchRequestByCity:@"武汉" province:nil];
+    [MobAPI sendRequest:request onResult:^(MOBAResponse *response)
+     {
+//         ZLog(@"tianqi = %@",response.responder);
+     }];
+
+    
 }
 
 #pragma mark collection的代理方法

@@ -58,6 +58,7 @@
 }
 
 -(void)loadKuaidiNet{
+
     [self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?type=&postid=%@",kuaidiUrl,self.textfiled.text]]]];
 }
 

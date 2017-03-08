@@ -21,6 +21,7 @@
 		8BB5BA251E6E511000695D93 /* MainChooesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5BA221E6E511000695D93 /* MainChooesModel.m */; };
 		8BB5BA261E6E511000695D93 /* MainInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5BA241E6E511000695D93 /* MainInfoModel.m */; };
 		8BB5BA2D1E6E516200695D93 /* KuaidiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5BA2C1E6E516200695D93 /* KuaidiViewController.m */; };
+		8BB5BA5A1E6FB32600695D93 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5BA591E6FB32600695D93 /* WeatherViewController.m */; };
 		8BFE36851E694C090081507C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE36841E694C090081507C /* main.m */; };
 		8BFE36881E694C090081507C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE36871E694C090081507C /* AppDelegate.m */; };
 		8BFE368B1E694C090081507C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE368A1E694C090081507C /* ViewController.m */; };
@@ -69,6 +70,8 @@
 		8BB5BA241E6E511000695D93 /* MainInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainInfoModel.m; sourceTree = "<group>"; };
 		8BB5BA2B1E6E516200695D93 /* KuaidiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KuaidiViewController.h; sourceTree = "<group>"; };
 		8BB5BA2C1E6E516200695D93 /* KuaidiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KuaidiViewController.m; sourceTree = "<group>"; };
+		8BB5BA581E6FB32600695D93 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		8BB5BA591E6FB32600695D93 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 		8BFE36801E694C090081507C /* ZSsearchTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZSsearchTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFE36841E694C090081507C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BFE36861E694C090081507C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 		8B3A6BD01E6D144700A6A448 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				8BB5BA571E6FB30C00695D93 /* WeatherController */,
 				8BB5BA2A1E6E515A00695D93 /* KuaidiController */,
 				8BB5BA161E6E50E700695D93 /* CaipuController */,
 				8B3A6BEF1E6D375000A6A448 /* MainViewController.h */,
@@ -251,6 +255,15 @@
 			path = KuaidiController;
 			sourceTree = "<group>";
 		};
+		8BB5BA571E6FB30C00695D93 /* WeatherController */ = {
+			isa = PBXGroup;
+			children = (
+				8BB5BA581E6FB32600695D93 /* WeatherViewController.h */,
+				8BB5BA591E6FB32600695D93 /* WeatherViewController.m */,
+			);
+			path = WeatherController;
+			sourceTree = "<group>";
+		};
 		8BFE36771E694C090081507C = {
 			isa = PBXGroup;
 			children = (
@@ -275,19 +288,19 @@
 				8B3A6BC91E6D107A00A6A448 /* Base */,
 				8BFE369D1E694D6F0081507C /* Tools */,
 				8BFE369A1E694C360081507C /* Three */,
+				8B3A6BC81E6D105F00A6A448 /* Home */,
+				8BFE36B51E6966D40081507C /* homeCell */,
+				8B3A6BF21E6D38F500A6A448 /* User */,
+				8BFE369B1E694C8B0081507C /* Others */,
 				8BFE36861E694C090081507C /* AppDelegate.h */,
 				8BFE36871E694C090081507C /* AppDelegate.m */,
 				8B3A6BC51E6D0ABC00A6A448 /* LogViewController.h */,
 				8B3A6BC61E6D0ABC00A6A448 /* LogViewController.m */,
 				8BFE36891E694C090081507C /* ViewController.h */,
 				8BFE368A1E694C090081507C /* ViewController.m */,
-				8B3A6BF21E6D38F500A6A448 /* User */,
-				8B3A6BC81E6D105F00A6A448 /* Home */,
 				8BFE368F1E694C090081507C /* Assets.xcassets */,
 				8BFE36B11E6959A30081507C /* LaunchScreen.storyboard */,
 				8BFE36941E694C090081507C /* Info.plist */,
-				8BFE36B51E6966D40081507C /* homeCell */,
-				8BFE369B1E694C8B0081507C /* Others */,
 				8BFE36831E694C090081507C /* Supporting Files */,
 			);
 			path = ZSsearchTool;
@@ -495,6 +508,7 @@
 				8BFE36A41E694D780081507C /* NSString+Tools.m in Sources */,
 				8BFE36AF1E6956340081507C /* NSDictionary+ZXPUnicode.m in Sources */,
 				8BB5BA251E6E511000695D93 /* MainChooesModel.m in Sources */,
+				8BB5BA5A1E6FB32600695D93 /* WeatherViewController.m in Sources */,
 				8B3A6BC71E6D0ABC00A6A448 /* LogViewController.m in Sources */,
 				8BB5BA261E6E511000695D93 /* MainInfoModel.m in Sources */,
 				8BB5BA0F1E6D5ABB00695D93 /* BaseViewController.m in Sources */,

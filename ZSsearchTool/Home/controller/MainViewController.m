@@ -11,7 +11,7 @@
 #import "LocationViewController.h"
 #import "MainInfoViewController.h"
 #import "KuaidiViewController.h"
-
+#import "WeatherViewController.h"
 
 #define homecellid @"homecellid"
 
@@ -40,7 +40,8 @@
     locationVC.locationSuccess = ^(NSString *city){
         item.title = city;
     };
-    [self.navigationController pushViewController:locationVC animated:YES];
+    WeatherViewController *weatherV = [[WeatherViewController alloc]init];
+    [self.navigationController pushViewController:weatherV animated:YES];
 }
 
 
