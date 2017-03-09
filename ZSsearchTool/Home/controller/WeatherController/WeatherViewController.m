@@ -26,15 +26,18 @@
         make.top.mas_equalTo(self.view).offset(-24);
     }];
     
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://tianqi.moji.com/weather/china/hubei/jiangxia-district"]]];
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://tianqi.moji.com/weather/china/hubei/hongshan-district"]]];
     
     NSString *datastr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-//    ZLog(@"datastr = %@",datastr);
-    [self.webview loadData:data MIMEType:@"text/html" characterEncodingName:@"UTF-8" baseURL:nil];
+    ZLog(@"datastr = %@",datastr);
+//    [self.webview loadData:data MIMEType:@"text/html" characterEncodingName:@"UTF-8" baseURL:nil];
 
-    
     //截取主要信息
-   NSString *reult = [self startRangeStr:@"description\" content=\"" endRangeStr:@"。\">" withStr:datastr];
+   NSString *reultmain = [self startRangeStr:@"description\" content" endRangeStr:@"keywords" withStr:datastr];
+    NSString *result = [self startRangeStr:@"=\"" endRangeStr:@"\">" withStr:reultmain];
+    if ([result rangeOfString:@"墨迹天气"].location != NSNotFound) {
+        result = [result stringByReplacingOccurrencesOfString:@"墨迹天气" withString:@"哈哈"];
+    }
 //    ZLog(@"result = %@",reult);
     //截取污染指数
     NSString *reult1 = [self startRangeStr:@"span class" endRangeStr:@"<div class=\"wea_info_avator\">" withStr:datastr];
@@ -63,9 +66,9 @@
     NSString *reultwind = [self startRangeStr:@"<em>" endRangeStr:@"</em>" withStr:reultshiduwind];
     //提示
     NSString *reultnotice = [self startRangeStr:@"clearfix\">" endRangeStr:@"right\">" withStr:reultshiduwind];
-    NSString *reultnotice1 = [self startRangeStr:@"<em>" endRangeStr:@"。</em>" withStr:reultnotice];
+    NSString *reultnotice1 = [self startRangeStr:@"<em>" endRangeStr:@"</em>" withStr:reultnotice];
 
-    ZLog(@"wind = %@ 污染指数%@ 当前温度%@ 天气%@ 图片%@ %@ 湿度%@ 风向%@ 提示%@",reult,wuranreult,reultcurr,reultcurrweather,reultcurrimg,reultupdate,reultshidu,reultwind,reultnotice1);
+    ZLog(@"wind = %@ 污染指数%@ 当前温度%@ 天气%@ 图片%@ %@ 湿度%@ 风向%@ 提示%@",result,wuranreult,reultcurr,reultcurrweather,reultcurrimg,reultupdate,reultshidu,reultwind,reultnotice1);
 }
 
 
