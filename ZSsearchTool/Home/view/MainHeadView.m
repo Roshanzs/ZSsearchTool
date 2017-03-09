@@ -24,6 +24,7 @@
 @property(nonatomic,strong)UILabel *windTLab;
 @property(nonatomic,strong)UILabel *updateLab;
 @property(nonatomic,strong)UILabel *wuranTLab;
+@property(nonatomic,strong)UILabel *currLab;
 @end
 
 static NSString *mainCollectioncellID = @"mainCollectioncellID";
@@ -132,6 +133,16 @@ static NSString *mainCollectioncellID = @"mainCollectioncellID";
         make.topMargin.mas_equalTo(TLab);
     }];
     
+    UILabel *currLab = [[UILabel alloc]init];
+    currLab.font = [UIFont systemFontOfSize:10];
+    self.currLab = currLab;
+    [cycleScrollView addSubview:currLab];
+    [currLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(Timg.mas_left).offset(-5);
+        make.topMargin.mas_equalTo(Timg);
+    }];
+
+    
     [self takeOthersInfoWith:cycleScrollView];
 
 }
@@ -181,6 +192,8 @@ static NSString *mainCollectioncellID = @"mainCollectioncellID";
     NSString *reultcurrimg = [self startRangeStr:@"src=\"" endRangeStr:@"\" alt" withStr:reulttime];
     //更新时间
     NSString *reultupdate = [self startRangeStr:@"uptime\">" endRangeStr:@"更" withStr:reulttime];
+    NSString *reultweather = [self startRangeStr:@"<b>" endRangeStr:@"</b>" withStr:reulttime];
+
     //    ZLog(@"result = %@ %@  %@ %@",reultcurr,reultcurrweather,reultcurrimg,reultupdate);
     
     //湿度和风向
@@ -201,6 +214,7 @@ static NSString *mainCollectioncellID = @"mainCollectioncellID";
     self.windTLab.text = reultwind;
     self.updateLab.text = reultupdate;
     self.wuranTLab.text = wuranreult;
+    self.currLab.text = reultweather;
 }
 
 
