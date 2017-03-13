@@ -25,6 +25,10 @@
 @property(nonatomic,strong)UILabel *updateLab;
 @property(nonatomic,strong)UILabel *wuranTLab;
 @property(nonatomic,strong)UILabel *currLab;
+@property(nonatomic,strong)SDCycleScrollView *cycleScrollView;
+
+//定时器
+@property(nonatomic,strong)NSTimer *timer;
 @end
 
 static NSString *mainCollectioncellID = @"mainCollectioncellID";
@@ -42,6 +46,7 @@ static NSString *mainCollectioncellID = @"mainCollectioncellID";
 
 -(void)setupUI{
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, WSCREEN, 150.0/667.0*HSCREEN) delegate:self placeholderImage:[UIImage imageNamed:@"detail"]];
+    self.cycleScrollView = cycleScrollView;
     cycleScrollView.localizationImageNamesGroup = @[@"timg"];
     [self addSubview:cycleScrollView];
     [self addSubview:self.collectionView];
@@ -142,9 +147,13 @@ static NSString *mainCollectioncellID = @"mainCollectioncellID";
         make.topMargin.mas_equalTo(Timg);
     }];
 
-    
     [self takeOthersInfoWith:cycleScrollView];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:UITrackingRunLoopMode];
+}
 
+-(void)timerUpdate{
+    [self takeOthersInfoWith:self.cycleScrollView];
 }
 
 -(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
@@ -212,7 +221,7 @@ static NSString *mainCollectioncellID = @"mainCollectioncellID";
     self.nightTLab.text = [NSString stringWithFormat:@"夜晚:%@度",NightT];
     self.shiduTLab.text = reultshidu;
     self.windTLab.text = reultwind;
-    self.updateLab.text = reultupdate;
+    self.updateLab.text = [NSString stringWithFormat:@"%@更新",reultupdate];
     self.wuranTLab.text = wuranreult;
     self.currLab.text = reultweather;
 }
